@@ -369,7 +369,7 @@ figure figcaption h4 {
   margin: 0;
 }
 figure figcaption h4 a {
-  color: #ff0000;
+  color: #000000;
 }
 figure figcaption p {
   font-size: 14px;
@@ -520,7 +520,7 @@ figure figcaption p {
   color: #000000;
 }
 .cd-headline.slide .cd-words-wrapper {
-  color: #ff0000;
+  color: #000000;
 }
 ul.social-icons {
   height: auto;
