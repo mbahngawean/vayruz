@@ -1,0 +1,374 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:300,700,400,100&subset=latin,latin-ext);
+@media screen {
+/**
+ * Layout
+ */
+    html {margin:0; padding:0; height:100%;}
+    body {margin:0; padding:0; font:300 1em 'Roboto', Arial, Helvetica, sans-serif; text-align:left; background:#171a21; height:auto; min-height:100%;}
+	
+a {text-decoration:none;}
+a img {border:none;}
+
+/* Typography resets */
+div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,p,blockquote,th,td {margin: 0; padding: 0;}
+
+/* Default paragraph styles */
+p {font-family: inherit; font-weight: 300; font-size: 1rem; line-height: 1.2; text-rendering: optimizeLegibility;}
+
+/* Default header styles */
+h1, h2, h3, h4, h5, h6 { font-weight: normal; font-style: normal; text-rendering: optimizeLegibility; margin-top: 0.2rem; margin-bottom: 0.5rem; line-height: 1.4;}
+h1 {font-size: 2.125rem;}
+h2 {  font-size: 1.5rem; }
+h3 {  font-size: 1.5rem; }
+h4 {  font-size: 1.425rem; }
+h5 {  font-size: 1.125rem; }
+h6 {  font-size: 1rem; }
+hr {  border: solid #dddddd; border-width: 1px 0 0; clear: both; margin: 1.25rem 0 1.1875rem; height: 0;}
+
+.row {margin-bottom:0em; }
+.text-center {text-align:center;}
+
+    b.corner {position:absolute; width:1px; height:1px; font-size:1px; line-height:1px; overflow:hidden; background:#171a21; font-weight:normal;}
+    b.lt {left:0px; top:0px;}
+    b.rt {right:0px; top:0px; }
+    b.lb {left:0px; bottom:0px;}
+    b.rb {right:0px; bottom:0px;}
+	
+    .strong {font-weight:bold;}
+    div.clear {clear:both; height:1px; overflow:hidden; font-size:1px;}
+	
+    div.holder {text-align:center; clear:both; position:relative;}
+    .container {position:relative;}
+
+    .gray-cover {height: 100%; left: 0; min-height: 100%; position: absolute; top: 0; width: 100%;}
+    
+    header {background:rgba(255,255,255,0.7); padding:0; z-index:1; position:relative;}
+    header .container {height:75px;}
+
+    div.Header {text-align:left; position:relative; padding:8px 0;}
+    div.Header h2 {font-weight:normal; color:#ffffff; line-height:1; font-size:1.2em; padding:0; margin:0;}
+	
+    div#main { background-repeat: no-repeat; background-position: center top; background-color: #544444;}
+    .mainblock {z-index:0; padding-bottom:4.5em;}
+
+    div.autorization {position:relative; float:right; margin:0;}
+	
+    div.SwitchLocale {right:auto; bottom:auto; padding:0 1.1em 0 0; position:relative; float:left; display:inline; margin:0; font-size:100%; z-index:1; background:#2976b1;}
+    div.SwitchLocale p {font-size:0.875em; text-align:left; margin:0; display:none;}
+    div.SwitchLocale div {margin:0;}
+    div.SwitchLocale div span.label {border:none; padding:0em 0.35em 0em 1.3em; font-weight:400; cursor:pointer; font-size:1.125em; color:#fff; line-height:75px; height:auto;}
+    div.SwitchLocale div b {display:none;}
+    div.SwitchLocale div#switchLocalesTrigger {height:75px; background:url(/images/index/selector_arrow_bottom.png) no-repeat center center;}
+    div.SwitchLocale div.highlighted {top:76px;}
+
+    .menu {display:none;}
+    .closeb2 {display:none;}
+
+    a.linklogin {position:relative; color:#fff; font-size:1.125em; padding:0em 1.2em; line-height:75px; display:block; vertical-align:top; background:#0061aa; float:left; display:inline; position:relative; margin: 0 1em 0 0; font-weight:400;}
+    a.linklogin:hover {text-decoration:none;}
+
+    h1.slogan {color:#ffffff; font-size:3.6em; text-align:right; margin:2em auto 1.5em; font-weight:700; padding:0; line-height:1.2;}
+    h1.slogan strong {display:block; font-size:2.16em; color:#ffffff; text-transform:uppercase; line-height:1; padding:0.2em 0;}
+
+    .linkregistration {background:url(/images/index/button.png) repeat-x top; border-radius:10px; padding:0.4em 2.5em; box-shadow:0 0 0 7px rgba(0, 0, 0, 0.6);  color:#ffffff; font-weight:700; font-size:1.6em; margin:0; float:right;}
+    .linkregistration:hover {text-decoration:none;}
+body.fr .linkregistration { padding:0.4em 1.75em; }
+body.en .linkregistration, body.it .linkregistration { padding:0.4em 3.75em; }
+
+    div.reg {display:none; z-index:21; position:absolute; top:0; left:0; width:100%;}
+    div.Registration {margin:0 2em; width:auto; position:relative; padding:1.4em 0;}
+    .closeth {position:absolute; right:10px; top:10px; z-index:20;}
+    .regpopup {margin:8em auto 0; width:386px; position:relative; background:#171a21; border-radius:10px; padding:0 0 1em;}
+    div.Registration h2 {color:#fff; font-size:2em; font-weight:100; text-transform:uppercase; line-height:1; text-align:center;}
+    div.Registration h2 strong {font-weight:100; text-transform:uppercase; color:#fff;}
+    div.Registration form { background:#272c38; border:10px solid #272c38; border-radius:10px; margin:1em 0;}
+
+    div.Registration dl.horizontal { margin-bottom: 0px !important; margin:0; overflow:hidden;}
+    div.Registration dl.horizontal dt {display:none;}
+    div.Registration dl.horizontal dd {width:100%; float:none; clear:both;}
+    div.Registration dd input, div.Registration dd select { -webkit-appearance: none; appearance: none; -moz-appearance: none; -o-appearance: none; background: #fff; border:none; padding:0.75em 1em; color:#898989;}
+
+    div.Registration dd select {background-image:url(/images/index/arrselect.png); background-repeat: no-repeat; background-position: 96% center; }
+    div.Registration select#birthDayPerson1, div.Registration select#birthDayPerson2 {width:33%; margin:0; background-position: 88% center; border-right:1px solid #bababa;  padding:0.5em 1em;}
+    div.Registration select#birthMonthPerson1, div.Registration select#birthMonthPerson2 {width:32%; margin:0; background-position: 88% center; padding:0.5em 1em;}
+    div.Registration select#birthYearPerson1, div.Registration select#birthYearPerson2 {width:32%; margin:0; background-position: 88% center; float:right; border-left:1px solid #bababa; padding:0.5em 1em;}
+    div.Registration dd input.invalid, div.Registration dd select.invalid, div.Registration dd textarea.invalid {background-color:#ffd9d7;}
+#sexId {border-radius:10px 10px 0 0; border-bottom:1px solid #bababa;}
+#lookingForSexId {border-bottom:1px solid #bababa;}
+#email {border-radius:0 0 10px 10px; padding:0.75em 1.3em;}
+
+    div.Registration input.submit {background:#00ad5d; border:none; color:#ffffff; text-transform:uppercase; border-radius:8px; font-size:1.5em; font-weight:700; padding:0.6em 0; line-height:normal; height:auto; width:100%; font-family:'Roboto'; -webkit-appearance: none; cursor:pointer;}
+
+body.ru div.Registration input.submit, body.sk div.Registration input.submit, body.pl div.Registration input.submit, body.cs div.Registration input.submit, body.fr div.Registration input.submit  {font-size:1.375em;}
+
+div.Registration dl dt, div.Registration dl dd { margin-bottom: 0!important;}
+
+div.Registration form dl:nth-child(4n+3) {background:#fff; border-bottom:1px solid #bababa; padding:4px 0;} /* !!!!!!!!! */
+    
+    dd p.warning {margin:0 0 5px; padding-top:5px;}
+    p.submitbutton {zoom:0;}
+    div.RegistrationSimple p.warning {font-size:66%; line-height:1.1; color:#fff;}
+    dl p.error {left:0; width:100%; background:#fff; padding:0 0 0 3%;}
+
+    div.submit-block p.warning {position:absolute; bottom:0; left:0; color:#2c2f35; text-align:center; }
+    div.RegistrationSimple div.submit-block p.warning a {color:#2c2f35;}
+
+    div#media {padding:0 0 3em;}
+    div#media .columns {}
+
+    .members {min-height:100%; padding:0;}
+
+    .welcome {}
+    .welcome p {line-height:1.7; font-size:0.875em;}
+
+    .SearchResult {position:relative; padding:1em 0 0; border-bottom:3px solid #fff;}
+    .SearchResult h2 {margin:0 0 0.8em; padding:1em 0 0.5em; text-align:left; text-transform:uppercase; display:none; line-height:1.3;}
+    div.simple {clear:both; overflow:hidden;}
+    div.simple div.member, div.simple div.featured {margin:0; padding:0; width:10%; border:0; height:auto; position:relative; font-size:100%;}
+    div.member img {width:100%; height:auto;}
+    div.member div.username {position:absolute; width:100%; bottom:0; left:0; text-align:center; display:none;}
+    div.member div.username a {color:#fff; font-size:0.875em; line-height:1.8;}
+.blueblock {position:absolute; left:0; top:0; width:100%;  background:rgba(0,97,170,0.86); color:#fff; text-transform:uppercase; text-align:left; z-index:20; padding:1em 0 1em 0.5em; height:100%; font-weight:100; font-size:1.5em;}
+.pinkblock {position:absolute; left:0; top:0; width:100%; height:100%; background:rgba(191,5,173,0.86); color:#fff; text-transform:uppercase; text-align:left; z-index:20; padding:1em 0 1em 0.5em; font-weight:100; font-size:1.5em; cursor:pointer;}
+.pinkblock:hover {text-decoration:none;}
+
+.wave {height:16px; width:100%; background:url(http://sexyflirt.us.com/images/index/wave.png) repeat-x top; margin-top:-16px;}
+
+    footer {padding:0 0 2em;}
+    ul#bottonNavigation {list-style:none; text-align:center; float:none; clear:both; padding:3em 0 1em;}
+    ul#bottonNavigation li {display:inline; padding:0 0.7em; border-right:1px solid #4c4d50;}
+    ul#bottonNavigation li a {color:#4c4d50; text-transform:uppercase; font-size:1em; font-weight:300;}
+    ul#bottonNavigation li a:hover {text-decoration:none;}
+    div#copyright {color:#4c4d50; text-align:center; float:none; clear:both; padding:1em 0 1.5em; margin:0; font-weight:300;}
+    div#copyright br {display:none;}
+    p.warningNotification {color:#4c4d50; font-size:0.875em; width:55%; margin:0 auto; line-height:1.4; font-weight:300;}
+
+        .custom_footer_content {padding:0 1% 1em; position:relative;}
+        .custom_footer_content .row {margin:0;}
+}
+
+@media only screen and (min-width: 1900px) {
+    .blueblock, .pinkblock { font-size: 2em;}
+}
+
+@media only screen and (min-width: 30.064em) {
+    div#main {background-image:url(http://sexyflirt.us.com/images/index/visual.jpg);}    
+}
+
+@media only screen and (max-width: 68.75em) {
+
+    ul#bottonNavigation {line-height:2;}
+    .blueblock, .pinkblock {font-size:1.1em; padding:1em 0 1.4em 0.5em;}
+    header .column, header .columns {padding-right:0;}
+    a.linklogin {margin:0;}
+}
+
+@media only screen and (max-width: 50.063em) {
+    header {z-index:1000;}
+    .mainblock { padding-bottom: 8em;}
+    .blueblock, .pinkblock { font-size: 1.5em;  padding: 1.4em 0.5em 1.6em 0.5em;}
+    h1.slogan {text-align:center; margin:4em auto 1.5em;}
+    .linkregistration {float:none;}
+    div#main { background-position: 5% top; background-size: 130% auto;}
+    div.simple div.member, div.simple div.featured {width:20%;}
+    div.member:nth-child(even) {display:none;}
+    p.warningNotification {width:80%;}
+    .regpopup { margin:4em auto 0;}
+    .gray-cover {margin-top:75px;}
+    div.reg {top:75px;}
+    div#main { background-position: center top; background-size: 100% auto; background-image:url(http://sexyflirt.us.com/images/index/visualtablet.jpg);}
+}
+
+@media only screen and (max-width: 40.063em) {
+
+    div.Header {padding:4px 0;}
+    div.SwitchLocale div span.label {line-height:53px;}
+    div.SwitchLocale div.highlighted {width:145px!important; top:53px;}
+    div.SwitchLocale div.highlighted ul {width:140px; border-right:none; padding:0 10px;}
+    div.SwitchLocale div.highlighted ul li a, div.SwitchLocale div.highlighted ul li span {font-size:1.2em; height:auto; line-height:1.4;}
+    div.SwitchLocale div#switchLocalesTrigger {height:53px;}
+    .float {display:block;}
+    div.autorization {}
+    .columns.autoriz {position:absolute; right:0; top:0; width:auto;}
+    a.linklogin {line-height:53px;}
+    h1.slogan {font-size:3em; margin: 3em auto 1.5em;}
+    div.reg {top:53px;}
+    .gray-cover {margin-top:53px;}
+
+    header {background:#cecdcd;}
+    header .container {height:53px;}
+    div#main { background-position: center top; background-size: 120% auto;}
+    div.Registration form {background:none; border:none;}
+    .regpopup {background:none; width:100%; margin:1.5em auto 0;}
+    div.simple div.member, div.simple div.featured {width:33.3%;}
+    div.member:nth-child(even) {display:none;}
+    
+    a.linkregistration {box-shadow:0 1px 1px rgba(0, 0, 0, 0.4);}
+    .mainblock { padding-bottom: 6em;}
+    p.warningNotification {width:90%;}
+}
+
+@media only screen and (max-width: 30.063em) {
+
+    header .container {height: 48px;}
+    .logo {width:70%;}
+body.es .logo {padding-left:0.1em; width:65%;}
+
+    h1.slogan { line-height: 1.1; margin: 2.5em auto 1em; font-size:2.5em;}
+body.it h1.slogan { font-size:2.4em;}
+    div#main { background-position: center top; background-size: 100% auto; background-image:url(http://sexyflirt.us.com/images/index/visualmobile.jpg);}
+    div.SwitchLocale {background:#3684bf; display:none;}
+body.es div.SwitchLocale {padding: 0 0.5em 0 0;}
+body.fr div.SwitchLocale {padding: 0 0.5em 0 0;}
+    div.SwitchLocale div span.label {line-height:48px; font-size:0.95em; padding:0 0.35em 0 1.6em;}
+body.en div.SwitchLocale div span.label {padding:0 0.35em 0 1.7em;}
+body.es div.SwitchLocale div span.label {padding:0 0.25em 0 0.875em;}
+body.fr div.SwitchLocale div span.label {padding:0 0.25em 0 0.875em;}
+    div.SwitchLocale div#switchLocalesTrigger {height:48px;}
+    div.SwitchLocale div.highlighted {top:48px;}
+    a.linklogin {line-height:48px; font-size:0.95em; background:#3684bf; padding:0 1.3em 0 0.3em; display:none;}
+body.es a.linklogin {padding:0 0.5em 0 0em;}
+body.fr a.linklogin {padding:0 0.5em 0 0em;}
+    .menu {position:relative; height:48px; width:52px; background:url(/images/index/menu.png) no-repeat center center #0061aa; display:block; cursor:pointer;}
+    .closeb2 {position:relative; height:48px; width:52px; background:url(/images/index/closeb2.png) no-repeat center center #0061aa; float:right; display:none; cursor:pointer;}
+    a.linkregistration {width:98%; display:block; padding:0.4em 0 0.5em !important;}
+    body.fr a.linkregistration {padding:0.4em 0; font-size:1.4em;}
+
+    .blueblock, .pinkblock { font-size: 1.1em; padding: 1.2em 0.5em 1.4em;}
+    .mainblock { padding-bottom: 3em;}
+
+    .regpopup {margin:0 auto;}
+    .gray-cover {margin-top:48px;}
+    div.reg {top:48px;}
+    div.Registration {margin: 0 0.8em;}
+    div.Registration h2 {font-size:1.875em;}
+    div.Registration form {margin: 0.75em 0 1.75em;}
+    div.submit-block p.warning, div.RegistrationSimple div.submit-block p.warning a {color:#5c5f65;}
+    .closeth {top:5px;}
+
+    select#lookingForSexId {boder-radius:0; border-bottom:none;}
+div.Registration form dl:nth-child(4n+3) {border-top:1px solid #bababa;}
+dl.horizontal dd {background:#fff;}
+#sexId, #email {border-radius:0;}
+.icon.warning {background-color:#000;}
+
+}
+
+@media only screen and (max-width: 20.063em) {
+
+}
+
+@media only screen and (max-width: 16.063em) {
+    h1.slogan { font-size: 2em;}
+    .blueblock, .pinkblock { font-size: 0.875em; padding: 1em 0.5em 1.2em;}
+    .closeb2 {width:38px;}
+    a.linklogin {padding:0 0.7em 0 0em;}
+    div.SwitchLocale {padding:0 0.7em 0 0em;}
+    div.SwitchLocale div span.label {padding:0 0.35em 0 0.7em;}
+    .logo {padding-left: 0.1em; width: 75%;}
+    div.Registration form { margin: 0.75em 0 2em;}
+    div.Registration h2 {font-size: 1.25em;}
+    div.Registration select#birthDayPerson1, div.Registration select#birthDayPerson2 {padding:0.5em 1em;}
+    div.Registration select#birthMonthPerson1, div.Registration select#birthMonthPerson2 {padding:0.5em 0em;}
+    div.Registration select#birthYearPerson1, div.Registration select#birthYearPerson2 {padding:0.5em 0.5em;}
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) { 
+	div.Registration dl dt {margin-bottom:0 !important}
+	div.Registration dl dd {margin-bottom:0 !important}
+	dd p.warning {margin:0 0 5px; padding-top:5px;}
+
+}
+
+
+.content-header h1{
+	color: #ff0000;
+	font-size: 3.1em;
+	font-weight: 700;
+	/* margin:0 0 0.5em; */
+	line-height: 1.3em;
+	font-family: 'Titan One', cursive;
+}
+h1 {
+    color: red;
+    text-shadow: 2px 2px 4px #fff;
+}
+.content-header h2{
+	color: #fff;
+	font-size: 3em;
+	font-weight: inherit;
+	margin: 0;
+	line-height: 1.3em;
+	font-family: 'Yesteryear', cursive;
+}
+h2 {
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+}
+.content-header p{
+	color: #FFFF00;
+	font-size: 2em;
+	font-weight: inherit;
+	line-height:1.2em;
+	font-family: 'Open Sans', sans-serif;
+}
+p {
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+}
+.content-header {
+	text-align: center;
+	margin-top: 10em;
+}
+
+//*---start-notify-form----*/
+.notify{
+	text-align: center;
+	background: rgba(0, 0, 0, 0.36);
+	width: 50%;
+	margin: 2em auto 0 auto;
+	padding: 0.5em 2em 2em 2em;
+	font-family: 'bebasregular';
+}
+.notify h3{
+	font-size: 3em;
+	color: #0000;
+	text-transform: uppercase;
+	padding: 1em 0;
+	word-spacing: 2px;
+}
+.notify input[type="text"]{
+	width: 52%;
+	padding: 10px;
+	border: none;
+	outline: none;
+	font-family: 'bebasregular';
+	font-size: 0.7em;
+}
+.notify input[type="button"]{
+	padding:10px;
+	border:none;
+	outline:none;
+	font-family: 'bebasregular';
+	background:#F3D026;
+	-webkit-transition: all 0.3s ease-out;
+	-moz-transition: all 0.3s ease-out;
+	-ms-transition: all 0.3s ease-out;
+	-o-transition: all 0.3s ease-out;
+	transition: all 0.3s ease-out;
+	color:#0000;
+	cursor:pointer;
+	font-size:3em;
+}
+.notify {
+	width: 72%;
+	margin: 0 auto;
+	text-align: center;
+	background: rgba(0, 0, 0, 0.31);
+	padding: 1em;
+	margin-top: 2em;
+}
+.notify input[type="submit"]:hover{
+	background:#fff;
+	color:#000;
+}
